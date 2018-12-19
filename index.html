@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>aDev</title>
+    
+    <!-- Fontello -->
+    <link rel="stylesheet" href="http://fontello.com/assets/bundle-fontello-61df1ad22263c6ac2c855f603ea63584.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+(function($){
+    $.fn.extend({
+        select2_sortable: function(){
+            var select = $(this);
+            $(select).select2({
+                width: '100%',
+                createTag: function(params) {
+                    return undefined;
+                }
+            });
+            var ul = $(select).next('.select2-container').first('ul.select2-selection__rendered');
+            ul.sortable({
+                placeholder : 'ui-state-highlight',
+                forcePlaceholderSize: true,
+                items       : 'li:not(.select2-search__field)',
+                tolerance   : 'pointer',
+                stop: function() {
+                    $($(ul).find('.select2-selection__choice').get().reverse()).each(function() {
+                        var id = $(this).data('data').id;
+                        var option = select.find('option[value="' + id + '"]')[0];
+                        $(select).prepend(option);
+                    });
+                }
+            });
+        }
+    });
+}(jQuery));
+console.log("if test")
+var u = false;
+var i = true;
+var o = false;
+if(i && (u ? true : o)){
+console.log(true)
+} else 
+console.log(false)
+console.log("if test")
+</script>
+    
+    <!-- <script src="lib/jszip-v3.1.5/dist/jszip.min.js"></script> -->
+    <!-- <script src="lib/jszip-v3.1.5/vendor/FileSaver.js"></script> -->
+    <!-- <script src="lib/jszip-utils/jszip-utils.min.js"></script> -->
+    <!-- <script src="prototype/script.js"></script> -->
+    <!-- <script src="zip.js"></script> -->
+    <!-- <script src="sort.js"></script> -->
+    <!-- <link rel="stylesheet" href="lib/sort/select2.min.css">
+    <script src="lib/sort/select2.js"></script>
+    <script src="lib/sort/select2.sortable.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script> -->
+    
+
+    <!-- <script src="lib/select2-sortable/select2.js"></script> -->
+    <!-- <script src="lib/select2-sortable/html.sortable.js"></script> -->
+    <!-- <link rel="stylesheet" href="lib/select2-sortable/select2.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="lib/select2-sortable/select2.sortable.css"> -->
+    <!-- <script src="lib/select2-sortable/select2.sortable.js"></script> -->
+    <!-- <script src="async.js"></script> -->
+    <!-- <script>
+        $(function() {
+          $('.select2.sortable').select2Sortable();
+        });
+  
+  
+        var orderChanged = false;
+  
+        function changeOrder() {
+          var order = orderChanged ? [3,1,5] : [5,3,1];
+          $('.select2.sortable').last().select2Sortable(order);
+  
+          orderChanged = !orderChanged;
+        }
+      </script> -->
+</head>
+<body>
+    <center>
+        <h1>Test side - @Anders</h1>
+        <hr>
+        <!-- <h2>Zip test</h2>
+        <div class="zip"><button id="zip-click">ZIP</button></div>
+        <hr> -->
+        <h2>Sort test</h2>
+        <select multiple="" class="select2" style="width: 50%;">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+            <option value="6">Six</option>
+          </select>
+        <div class="sort"></div>
+    </center>
+    <script>
+        var dn = 2.5;
+        console.log(typeof dn);
+        console.log(Number.isInteger(dn));
+    </script>
+</body>
+</html>

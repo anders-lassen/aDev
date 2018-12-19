@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function strreplace(p){
+                p = p.replace(/e/g,"_1_");
+                p = p.replace(/\?/g,"_10_");
+
+                return p;
+            }
+            function reverseString(str) {
+                tmp_arr = str.split(/\?(?=[^\?]+$)/);
+                tmp_arr[0] = strreplace(tmp_arr[0]);
+                return tmp_arr.join("?");
+            }
+            var param = "????filter=something";
+            console.log("param:" + param);
+            console.log("conv:" + reverseString(param));
+
+            // var array = param.split(/\?(?=[^\?]+$)/);
+            // console.log(array);
+</script>
+</body>
+</html>

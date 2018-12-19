@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Select2.sortable : Combines select2 and html5sortable for sorted selectlist awesomeness!">
+
+    <!-- bower:js -->
+    <script src="http://finn.heemeyer.net/select2.sortable/bower_components/jquery/dist/jquery.js"></script>
+    <!-- <script src="http://finn.heemeyer.net/select2.sortable/bower_components/select2-ng/select2.js"></script> -->
+    <!-- <script src="lib/select2-sortable/select2.js"></script> -->
+    <script src="lib/select2-sortable/select2-new.js"></script>
+    <script src="http://finn.heemeyer.net/select2.sortable/bower_components/html.sortable/dist/html.sortable.js"></script>
+    <!-- endbower -->
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="http://finn.heemeyer.net/select2.sortable/bower_components/select2-ng/select2.css" />
+    <!-- endbower -->
+
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"> -->
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="http://finn.heemeyer.net/select2.sortable/stylesheets/stylesheet.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="http://finn.heemeyer.net/select2.sortable/select2.sortable.css">
+
+    <script src="http://finn.heemeyer.net/select2.sortable/select2.sortable.js"></script>
+    <script>
+//      $(function() {
+//        $('.select2.sortable').select2Sortable();
+//      });
+
+
+//      var orderChanged = false;
+//
+//      function changeOrder() {
+//        var order = orderChanged ? [3,1,5] : [5,3,1];
+//        $('.select2.sortable').last().select2Sortable(order);
+//
+//        orderChanged = !orderChanged;
+//      }
+    </script>
+
+    <title>select2.sortable</title>
+  </head>
+
+  <body>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Usage</h2>
+
+        <p>Suppose you got a multiselect like this one (view html in inspector):</p>
+
+        <select multiple>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+          <option value="6">Six</option>
+        </select>
+
+        <br>
+        <br>
+
+        <p>Use this code:</p>
+
+<pre><code>$('.select2.sortable').select2Sortable();</code></pre>
+
+        <br>
+
+      <p>To get searchable, sortable awesomeness:</p>
+
+      <select class="select2 sortable" multiple>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        <option value="6">Six</option>
+      </select>
+
+      <br>
+      <br>
+
+      <!-- <h3>Set initial order</h3>
+
+      <br>
+
+      <p>Set initially selected options as usual and set the initial order with <code>data-order</code>-attribute:</p>
+
+<pre><code>&lt;select multiple data-order=&quot;3,1,5&quot;&gt;&lt;/select&gt;</code></pre>
+
+      <br>
+
+      <p>With options <code>1,3,5</code> selected, it will look like:</p>
+
+      <p>
+        <select class="select2 sortable" multiple data-order="3,1,5">
+          <option selected value="1">One</option>
+          <option value="2">Two</option>
+          <option selected value="3">Three</option>
+          <option value="4">Four</option>
+          <option selected value="5">Five</option>
+          <option value="6">Six</option>
+        </select>
+      </p>
+
+      <br>
+      <p>You can also change the order <strong>with javascript</strong>, programatically:</p>
+
+<pre><code>$('.select2.sortable').select2Sortable([5,3,1]);</code></pre>
+
+      <br>
+
+      <p>
+        <button class="pure-button" onClick="changeOrder();">Change order</button>
+      </p> -->
+
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Select2.sortable maintained by <a href="https://github.com/tonekk">tonekk</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
